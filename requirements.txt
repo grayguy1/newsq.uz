@@ -1,0 +1,3 @@
+conda create -n st python pandas tqdm
+onda activate st
+pip install simpletransformers
