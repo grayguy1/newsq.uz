@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+<link href="./static/index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<head>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>       
+<link type="text/css" rel="stylesheet" href="./static/simplePagination/simplePagination.css"/>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/css/util.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/main.css">
+  <script src="https://pagination.js.org/dist/2.1.5/pagination.js"></script>
+	<title>duvduvgap</title>
+</head>
+<body> 
+  <h1 class="center" style="background-color: #edf6f9; display:block; height: 350px;">
+    <img id="logo" class="center" src="./static/ddglogo.png" alt="logo" width="350" height="350">
+  </h1>
+            <div class="contact1">
+                <div class="container-contact1">
+                  <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-xs-6" style="overflow-x: scroll; scroll-snap-stop: center;">
+                            <iframe id="source" src="" height="100%" width="200%" title="Article Page" style="overflow-x: scroll; transform: scale(0.5)"></iframe>
+                            <script>
+                                function center(){
+                                    document.getElementById('source').scrollIntoView({ inline: 'center' })
+                                }
+                                center()
+                            </script>
+                        </div>
+                          <div class="col-xs-6" style="text-indent: 20px;"><iframe src="iframe.html" height="700" width="700" title="text info"></iframe></div>
+                        </div>
+                        <script>
+                            let article = JSON.parse(localStorage.getItem('article'))
+                            document.getElementById('source').src = article['url']
+
+                            function resizeIFrameToFitContent( iFrame ) {
+                                iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+                                iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+                            }
+
+                            resizeIFrameToFitContent(document.getElementById('source'))
+                        </script>
+                      </div>
+                </div>
+    </div>
+    <script type="text/javascript" src="./static/simplePagination/jquery.simplePagination.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+<script src="./static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--==============================================================================================-->
+	<script src="./static/vendor/bootstrap/js/popper.js"></script>
+	<script src="./static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+	<script src="./static/js/main.js"></script>
+
+</body>
+</html>
